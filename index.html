@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--All Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <!-- link css file-->
+    <link rel="stylesheet" href="./style.css">
+	<!--link icons-->
+	<link rel="stylesheet" href="https://fonts.googleeapis.com/css2?family=Material+Symbol-Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Title -->
+     <title>PiZaa</title>
+</head>
+<body>
+    <!-- header section starts  -->
+
+    <header class="header">
+       <section class="flex">
+
+         <a href="" class="logo">PiZaa</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#order">Order</a>
+            <a href="#faq">Faq</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="order-btn" class="fas fa-box"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"><span></span></div>
+         </div>
+
+       </section>
+
+    </header>
+    <!-- header section ends -->
+    <div class="user-account">
+        <section>
+          
+            <div id="close-account"><span>close</span></div>
+
+            <div class="user">
+                <p><span>you are not logged in now!</span></p>
+             </div>
+        
+             <div class="display-oreders">
+                <p>pizza-1 <span>( $3/- x 2 )</span></p>
+                <p>pizza-1 <span>( $2/- x 1 )</span></p>
+                <p>pizza-1 <span>( $4/- x 4 )</span></p>
+                <p>pizza-1 <span>( $2/- x 1 )</span></p>
+             </div>
+
+             <div class="flex">
+
+                <form action="" method="post">
+                   <h3>login now</h3>
+                   <input type="email" name="email" required class="box"
+                    maxlength="20" placeholder="enter your email" maxlength="50">
+                   <input type="password" name="pass" required class="box"
+                    maxlenth="20" placeholder="enter your password" maxlength="20">
+                   <input type="submit" value="login now" name="login" class="btn">
+                </form>
+       
+                <form action="" method="post">
+                   <h3>register now</h3>
+                   <input type="text" name="name" required class="box" placeholder="enter your name" maxlength="20" >
+                   <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+                   <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+                   <input type="password" name="cpass" required class="box" placeholder="confirm your password" maxlength="20">
+                   <input type="submit" value="register now" name="register" class="btn">
+                </form>
+       
+             </div>
+       
+        </section>
+    </div>
+
+   <!--my orders-->
+   <div class="my-orders">
+
+      <section>
+
+         <div id="close-orders"><span>close</span></div>
+
+         <h3 class="title">My Order</h3>
+
+         <!-- box 1-->
+         <div class="box">
+          <p>placed on : <span>06/04/2022</span></p>
+          <p>name : <span>Adam Nasr</span></p>
+          <p>number : <span>01200569215</span></p>
+          <p>address : <span>flat no. 123, bulding no. 2,
+                           jogeshwari, mumbai, 
+                           india - 400104</span></p>
+          <p>payment method : <span>06/04/2022</span></p>
+          <p>Your orders : <span>pizza 01 $3/- x 2, 
+            pizza 03 $2/- x 1, 
+            pizza 06 $4/- x 4, 
+            pizza 07, 
+            $2/- x 1
+         </span></p>
+         <p>total price : <span>11$</span></p>
+         <p>payment status <span style="color: var(--red);">pending</span></p>
+         </div>
+
+      <!--box2-->
+
+      <div class="box">
+         <p>placed on : <span>06/04/2022</span> </p>
+         <p>name : <span>shaikh anas</span> </p>
+         <p>number : <span>1234567890</span></p>
+         <p>address : <span>flat no. 123, bulding no. 2, jogeshwari, mumbai, india - 400104</span></p>
+         <p>payment method : <span>cash on delivery</span></p>
+         <p>your orders : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+         <p>total price : <span>$11/-</span></p>
+         <p>payment status : <span style="color: var(--red);">pending</span> </p>
+      </div>
+
+      </section>
+   </div>
+  
+<!-- Shopping cart-->
+   <div class="shopping-cart">
+
+      <section>
+   
+         <div id="close-cart"><span>close</span></div>
+   
+         <div class="box">
+            <a href="#" class="fas fa-times"></a>
+            <img src="images/pizza-1.jpg" alt="">
+            <div class="content">
+               <p>pizza-1 <span>( $3/- x 2 )</span></p>
+               <form action="" method="post">
+                  <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                  <button type="submit" class="fas fa-edit" name="update_qty"></button>
+               </form>
+            </div>
+         </div>
+   
+         <div class="box">
+            <a href="#" class="fas fa-times"></a>
+            <img src="images/pizza-3.jpg" alt="">
+            <div class="content">
+               <p>pizza-3 <span>( $2/- x 1 )</span></p>
+               <form action="" method="post">
+                  <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+                  <button type="submit" class="fas fa-edit" name="update_qty"></button>
+               </form>
+            </div>
+         </div>
+   
+         <div class="box">
+            <a href="#" class="fas fa-times"></a>
+            <img src="images/pizza-6.jpg" alt="">
+            <div class="content">
+               <p>pizza-6 <span>( $4/- x 2 )</span></p>
+               <form action="" method="post">
+                  <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                  <button type="submit" class="fas fa-edit" name="update_qty"></button>
+               </form>
+            </div>
+         </div>
+   
+         <div class="box">
+            <a href="#" class="fas fa-times"></a>
+            <img src="images/pizza-7.jpg" alt="">
+            <div class="content">
+               <p>pizza-7 <span>( $2/- x 1 )</span></p>
+               <form action="" method="post">
+                  <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+                  <button type="submit" class="fas fa-edit" name="update_qty"></button>
+               </form>
+            </div>
+         </div>
+   
+         <a href="#order" class="btn">order now</a>
+   
+      </section>
+   </div>
+
+<!-- home -->
+ <div class="home-bg">
+   <section class="home">
+   <div class="slide-container">
+
+      <!-- b o x 1   -->
+      <div class="slide active">
+         <div class="image">
+            <img src="./images/home-img-1.png" alt="">
+         </div>
+         <div class="content">
+            <h3>homemade Pepperoni Pizza</h3>
+            <div class="fas fa-angle-left" onclick="prev()"></div>
+            <div class="fas fa-angle-right" onclick="next()"></div>
+         </div>
+      </div>
+      <!-- b o x 2   -->
+      <div class="slide">
+         <div class="image">
+            <img src="images/home-img-2.png" alt="">
+         </div>
+         <div class="content">
+            <h3>Pizza With Mushrooms</h3>
+            <div class="fas fa-angle-left" onclick="prev()"></div>
+            <div class="fas fa-angle-right" onclick="next()"></div>
+         </div>
+      </div>
+      <!-- b o x 3   -->
+      <div class="slide">
+         <div class="image">
+            <img src="./images/home-img-3.png" alt="">
+         </div>
+         <div class="content">
+            <h3>Mascarpone And Mushrooms</h3>
+            <div id="left" class="fas fa-angle-left" onclick="prev()"></div>
+            <div id="right" class="fas fa-angle-right" onclick="next()"></div>
+         </div>
+      </div>
+   </div>
+</section>
+ </div>
+<script src="./main.js"></script>
+</body>
+</html>
